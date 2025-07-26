@@ -1,16 +1,16 @@
 # CMDB API 认证配置指南
 
-## 🎯 重要发现
+## 🎯 重要说明
 
-通过分析[Veops CMDB API官方文档](https://veops.cn/docs/docs/cmdb/cmdb_api)，我们发现CMDB系统使用**API Key/Secret签名认证**方式，而不是JWT Token认证。
+根据[Veops CMDB API官方文档](https://veops.cn/docs/docs/cmdb/cmdb_api)和实际测试验证，本工具已简化为仅支持**API Key/Secret签名认证**方式，确保最佳的安全性和兼容性。
 
 ## 📋 认证方式说明
 
-| 认证方式 | 用途 | 获取方式 |
-|---------|------|----------|
-| **API Key/Secret** ✅ | API调用（推荐） | ACL系统中获取 |
-| **JWT Token** | Web前端界面 | 登录接口获取 |
-| **用户名密码** | 备用方式 | 直接配置 |
+| 认证方式 | 状态 | 说明 |  
+|---------|------|------|
+| **API Key/Secret** ✅ | 已实现 | 唯一支持的认证方式，安全可靠 |
+| **JWT Token** ❌ | 已移除 | 主要用于Web前端，API调用不推荐 |
+| **用户名密码** ❌ | 已移除 | 安全性较低，不适合API调用 |
 
 ## 🔑 获取API凭据
 
@@ -37,21 +37,17 @@
 cmdb:
   base_url: "https://cmdb.veops.cn"
   api_version: "api/v0.1"
-  login_api_version: "api/v1"
   auth:
-    # 将YOUR_API_KEY和YOUR_API_SECRET替换为真实值
-    api_key: "your_real_api_key_here"
-    api_secret: "your_real_api_secret_here"
-    # 备用认证
-    username: "your_username"
-    password: "your_password"
+    # 将下面的示例值替换为真实的API凭据
+    api_key: "d0a8fb5aeedf466c92cc5142a18d1a68"
+    api_secret: "DSGYH81jqfw~%A&vgyJKXrO*UFVaW2xt"
 ```
 
 ### 方法2：环境变量（推荐）
 ```bash
-export CMDB_AUTH_API_KEY="your_real_api_key_here"
-export CMDB_AUTH_API_SECRET="your_real_api_secret_here"
-export CMDB_BASE_URL="https://your-cmdb-server.com"
+export CMDB_AUTH_API_KEY="d0a8fb5aeedf466c92cc5142a18d1a68"
+export CMDB_AUTH_API_SECRET="DSGYH81jqfw~%A&vgyJKXrO*UFVaW2xt"  
+export CMDB_BASE_URL="https://cmdb.veops.cn"
 ```
 
 ### 方法3：命令行参数

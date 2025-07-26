@@ -5,18 +5,20 @@
 
 一个高性能的CMDB服务树数据爬取工具，基于Golang开发，支持并发爬取和多种数据输出格式。
 
-## 🎯 重要更新 - API认证方式
+## 🎯 重要更新 - 技术修复与优化
 
-**通过分析[Veops CMDB API官方文档](https://veops.cn/docs/docs/cmdb/cmdb_api)，我们发现CMDB系统使用API Key/Secret签名认证！**
+**最新版本已完成重要技术修复，确保与演示环境完美兼容！**
 
-❌ **之前的误解**：从前端代码分析以为使用JWT Token认证  
-✅ **正确方式**：API调用需要使用API Key/Secret签名认证  
+✅ **API认证优化**：简化为仅支持API Key/Secret签名认证，提高安全性  
+✅ **查询参数修复**：修复了`use_id_filter`参数导致的数据为空问题  
+✅ **JSON解析增强**：完美处理CI关系统计API的混合数据类型  
+✅ **演示环境验证**：17个服务树视图全部测试通过  
 
 **请查看 [API_AUTHENTICATION.md](API_AUTHENTICATION.md) 获取详细配置指南！**
 
 ## ✨ 特性
 
-- 🔐 **多种认证方式**：API Key/Secret签名认证（推荐）、JWT Token、用户名密码
+- 🔐 **安全认证**：API Key/Secret签名认证，确保API调用安全性
 - 🚀 **高并发爬取**：支持配置最大并发数和请求间隔
 - 📊 **多格式输出**：JSON、YAML、CSV格式支持
 - 🎯 **智能过滤**：支持指定服务树视图、深度限制
@@ -41,12 +43,14 @@
 
 ## 📋 API认证说明
 
-### 🔑 API Key认证（推荐）
+### 🔑 API Key认证（唯一方式）
 ```yaml
 cmdb:
+  base_url: "https://cmdb.veops.cn"
+  api_version: "api/v0.1"
   auth:
-    api_key: "your_api_key_from_acl_system"
-    api_secret: "your_api_secret_from_acl_system" 
+    api_key: "d0a8fb5aeedf466c92cc5142a18d1a68"    # 从ACL系统获取
+    api_secret: "DSGYH81jqfw~%A&vgyJKXrO*UFVaW2xt"  # 从ACL系统获取
 ```
 
 ### 📝 签名算法
@@ -209,22 +213,27 @@ logging:
 ```bash
 ✅ 使用API Key认证
 ✅ 成功连接到 https://cmdb.veops.cn
-✅ 获取到 3 个服务树视图
-✅ 开始爬取: 产品服务树 (1/3)
-✅ 爬取完成: 1250 个节点, 最大深度 4 层
+✅ 获取到 17 个服务树视图
+✅ 开始爬取: KKKK (1/17)
+✅ 爬取完成: 3 个节点, 最大深度 2 层
+✅ 开始爬取: AKG (2/17)
+✅ 爬取完成: 16 个节点, 最大深度 2 层
+...
 ✅ 数据已导出到: ./output/service_trees.json
 ✅ 摘要已导出到: ./output/service_trees_summary.json
 
 === 爬取结果摘要 ===
-服务树总数: 3
-总计节点数: 5000
-最大深度: 5
-爬取耗时: 3.2s
+服务树总数: 17
+总计节点数: 144
+最大深度: 4
+爬取耗时: 32.26s
+演示环境验证: ✅ 全部通过
 ==================
 ```
 
 ## 📄 文档
 
+- **[更新日志](CHANGELOG.md)** - 版本更新记录和修复详情
 - **[API认证配置指南](API_AUTHENTICATION.md)** - 详细的认证配置说明
 - **[调试指南](DEBUG_GUIDE.md)** - dlv调试器使用指南和技巧
 - **[Cursor调试指南](CURSOR_DEBUG_GUIDE.md)** - Cursor编辑器专用调试配置

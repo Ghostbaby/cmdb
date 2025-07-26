@@ -1,0 +1,50 @@
+cmdb:
+  # CMDB API 基础地址
+  base_url: "https://cmdb.veops.cn"
+  # API版本
+  api_version: "api/v0.1"
+  # API Key认证
+  auth:
+    api_key: "d0a8fb5aeedf466c92cc5142a18d1a68"
+    api_secret: "DSGYH81jqfw~%A&vgyJKXrO*UFVaW2xt"
+  
+  # 请求配置
+  request:
+    timeout: 30s
+    retry_count: 3
+    retry_wait_time: 1s
+
+# 爬取配置
+crawler:
+  # 服务树视图配置
+  service_tree:
+    # 指定要爬取的服务树视图名称，空则爬取所有
+    target_views: []
+    # 爬取深度限制，-1表示无限制
+    max_depth: -1
+    # 每次请求的数量限制
+    page_size: 1000
+    # 是否包含叶子节点统计
+    include_statistics: true
+  
+  # 并发配置
+  concurrency:
+    # 最大并发数
+    max_workers: 10
+    # 请求间隔
+    request_interval: 100ms
+
+# 输出配置
+output:
+  # 输出格式: json, yaml, csv
+  format: "json"
+  # 输出文件路径
+  file_path: "./output/service_tree_data.json"
+  # 是否美化输出
+  pretty_print: true
+
+# 日志配置
+logging:
+  level: "debug"  # debug, info, warn, error
+  output: "console"  # console, file
+  file_path: "./logs/cmdb-crawler.log" 

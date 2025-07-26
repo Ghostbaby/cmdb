@@ -1,0 +1,223 @@
+{
+  "metadata": {
+    "exported_at": "2025-07-26T21:04:56.781308+08:00",
+    "format": "json",
+    "version": "1.0",
+    "tree_count": 17,
+    "total_nodes": 152
+  },
+  "summary": [
+    {
+      "view_name": "adasdasdas",
+      "view_id": 27,
+      "root_count": 3,
+      "total_nodes": 10,
+      "max_depth": 3,
+      "crawled_at": "2025-07-26T21:04:22.027012+08:00",
+      "is_public": true,
+      "leaf_types": [
+        "harddisk"
+      ]
+    },
+    {
+      "view_name": "dw2",
+      "view_id": 38,
+      "root_count": 3,
+      "total_nodes": 8,
+      "max_depth": 4,
+      "crawled_at": "2025-07-26T21:04:24.338455+08:00",
+      "is_public": true,
+      "leaf_types": [
+        "harddisk"
+      ]
+    },
+    {
+      "view_name": "ooo",
+      "view_id": 31,
+      "root_count": 3,
+      "total_nodes": 7,
+      "max_depth": 3,
+      "crawled_at": "2025-07-26T21:04:27.615316+08:00",
+      "is_public": true,
+      "leaf_types": [
+        "RAM",
+        "product"
+      ]
+    },
+    {
+      "view_name": "test",
+      "view_id": 28,
+      "root_count": 11,
+      "total_nodes": 13,
+      "max_depth": 2,
+      "crawled_at": "2025-07-26T21:04:29.851677+08:00",
+      "is_public": true,
+      "leaf_types": [
+        "RAM",
+        "product"
+      ]
+    },
+    {
+      "view_name": "njnj",
+      "view_id": 42,
+      "root_count": 3,
+      "total_nodes": 10,
+      "max_depth": 3,
+      "crawled_at": "2025-07-26T21:04:31.644205+08:00",
+      "is_public": true,
+      "leaf_types": [
+        "harddisk"
+      ]
+    },
+    {
+      "view_name": "服务室1111",
+      "view_id": 34,
+      "root_count": 3,
+      "total_nodes": 8,
+      "max_depth": 4,
+      "crawled_at": "2025-07-26T21:04:33.941793+08:00",
+      "is_public": true,
+      "leaf_types": [
+        "harddisk"
+      ]
+    },
+    {
+      "view_name": "12121221",
+      "view_id": 25,
+      "root_count": 3,
+      "total_nodes": 6,
+      "max_depth": 2,
+      "crawled_at": "2025-07-26T21:04:37.322299+08:00",
+      "is_public": true,
+      "leaf_types": [
+        "RAM",
+        "product"
+      ]
+    },
+    {
+      "view_name": "AKG",
+      "view_id": 33,
+      "root_count": 11,
+      "total_nodes": 16,
+      "max_depth": 2,
+      "crawled_at": "2025-07-26T21:04:38.78674+08:00",
+      "is_public": true,
+      "leaf_types": [
+        "harddisk"
+      ]
+    },
+    {
+      "view_name": "aaaa",
+      "view_id": 36,
+      "root_count": 11,
+      "total_nodes": 16,
+      "max_depth": 2,
+      "crawled_at": "2025-07-26T21:04:40.565421+08:00",
+      "is_public": true,
+      "leaf_types": [
+        "harddisk"
+      ]
+    },
+    {
+      "view_name": "dw1",
+      "view_id": 37,
+      "root_count": 3,
+      "total_nodes": 10,
+      "max_depth": 3,
+      "crawled_at": "2025-07-26T21:04:42.348479+08:00",
+      "is_public": true,
+      "leaf_types": [
+        "harddisk"
+      ]
+    },
+    {
+      "view_name": "BBHHH",
+      "view_id": 43,
+      "root_count": 11,
+      "total_nodes": 13,
+      "max_depth": 2,
+      "crawled_at": "2025-07-26T21:04:44.716909+08:00",
+      "is_public": true,
+      "leaf_types": [
+        "RAM",
+        "product"
+      ]
+    },
+    {
+      "view_name": "FFFFF",
+      "view_id": 41,
+      "root_count": 3,
+      "total_nodes": 5,
+      "max_depth": 2,
+      "crawled_at": "2025-07-26T21:04:46.538402+08:00",
+      "is_public": true,
+      "leaf_types": [
+        "product"
+      ]
+    },
+    {
+      "view_name": "ak",
+      "view_id": 35,
+      "root_count": 3,
+      "total_nodes": 5,
+      "max_depth": 2,
+      "crawled_at": "2025-07-26T21:04:48.801531+08:00",
+      "is_public": true,
+      "leaf_types": [
+        "server",
+        "vserver",
+        "disk",
+        "project",
+        "product"
+      ]
+    },
+    {
+      "view_name": "qin",
+      "view_id": 32,
+      "root_count": 11,
+      "total_nodes": 14,
+      "max_depth": 3,
+      "crawled_at": "2025-07-26T21:04:50.05905+08:00",
+      "is_public": true,
+      "leaf_types": [
+        "harddisk"
+      ]
+    },
+    {
+      "view_name": "qinTest",
+      "view_id": 39,
+      "root_count": 3,
+      "total_nodes": 5,
+      "max_depth": 2,
+      "crawled_at": "2025-07-26T21:04:51.826482+08:00",
+      "is_public": true,
+      "leaf_types": [
+        "product"
+      ]
+    },
+    {
+      "view_name": "t1",
+      "view_id": 30,
+      "root_count": 2,
+      "total_nodes": 3,
+      "max_depth": 2,
+      "crawled_at": "2025-07-26T21:04:54.136703+08:00",
+      "is_public": true,
+      "leaf_types": [
+        "harddisk"
+      ]
+    },
+    {
+      "view_name": "KKKK",
+      "view_id": 40,
+      "root_count": 2,
+      "total_nodes": 3,
+      "max_depth": 2,
+      "crawled_at": "2025-07-26T21:04:55.412455+08:00",
+      "is_public": true,
+      "leaf_types": [
+        "harddisk"
+      ]
+    }
+  ]
+}
